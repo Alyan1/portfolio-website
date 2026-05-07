@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alyan Naqvi | AI Engineer & ML Specialist</title>
-    <meta name="description" content="Alyan Naqvi - Computer Science graduate and ML Specialist skilled in Generative AI, RAG, enterprise automation (n8n) and scalable software architecture.">
-    
+    <meta name="description"
+        content="Alyan Naqvi - Computer Science graduate and ML Specialist skilled in Generative AI, RAG, enterprise automation (n8n) and scalable software architecture.">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Tailwind Config for Custom Colors -->
     <script>
         tailwind.config = {
@@ -53,20 +56,22 @@
             }
         }
     </script>
-    
+
     <style>
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
+
         ::-webkit-scrollbar-track {
             background: #0f172a;
         }
+
         ::-webkit-scrollbar-thumb {
             background: linear-gradient(180deg, #06b6d4, #8b5cf6);
             border-radius: 4px;
         }
-        
+
         /* Glassmorphism Effect */
         .glass {
             background: rgba(30, 41, 59, 0.6);
@@ -74,14 +79,14 @@
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
-        
+
         .glass-strong {
             background: rgba(30, 41, 59, 0.85);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         /* Gradient Text */
         .gradient-text {
             background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 50%, #ec4899 100%);
@@ -89,76 +94,90 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         /* Glow Effects */
         .glow-cyan {
             box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
         }
-        
+
         .glow-purple {
             box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
         }
-        
+
         /* Reveal Animation Classes */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
         }
-        
+
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         .reveal-left {
             opacity: 0;
             transform: translateX(-50px);
             transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
         }
-        
+
         .reveal-left.active {
             opacity: 1;
             transform: translateX(0);
         }
-        
+
         .reveal-right {
             opacity: 0;
             transform: translateX(50px);
             transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
         }
-        
+
         .reveal-right.active {
             opacity: 1;
             transform: translateX(0);
         }
-        
+
         .reveal-scale {
             opacity: 0;
             transform: scale(0.9);
             transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
         }
-        
+
         .reveal-scale.active {
             opacity: 1;
             transform: scale(1);
         }
-        
+
         /* Stagger delays */
-        .delay-100 { transition-delay: 100ms; }
-        .delay-200 { transition-delay: 200ms; }
-        .delay-300 { transition-delay: 300ms; }
-        .delay-400 { transition-delay: 400ms; }
-        .delay-500 { transition-delay: 500ms; }
-        
+        .delay-100 {
+            transition-delay: 100ms;
+        }
+
+        .delay-200 {
+            transition-delay: 200ms;
+        }
+
+        .delay-300 {
+            transition-delay: 300ms;
+        }
+
+        .delay-400 {
+            transition-delay: 400ms;
+        }
+
+        .delay-500 {
+            transition-delay: 500ms;
+        }
+
         /* Background Grid Pattern */
         .bg-grid {
-            background-image: 
+            background-image:
                 linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
             background-size: 50px 50px;
         }
-        
+
         /* Floating Orbs */
         .orb {
             position: absolute;
@@ -167,48 +186,53 @@
             opacity: 0.4;
             pointer-events: none;
         }
-        
+
         /* Tech Badge Hover */
         .tech-badge {
             transition: all 0.3s ease;
         }
+
         .tech-badge:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
         }
-        
+
         /* Project Card Hover */
         .project-card {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .project-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 25px 50px -12px rgba(6, 182, 212, 0.25);
         }
-        
+
         /* Button Styles */
         .btn-primary {
             background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
             transition: all 0.3s ease;
         }
+
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(6, 182, 212, 0.4);
         }
-        
+
         .btn-secondary {
             border: 1px solid rgba(6, 182, 212, 0.5);
             transition: all 0.3s ease;
         }
+
         .btn-secondary:hover {
             background: rgba(6, 182, 212, 0.1);
             border-color: #06b6d4;
         }
-        
+
         /* Navigation Link Hover */
         .nav-link {
             position: relative;
         }
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -219,56 +243,63 @@
             background: linear-gradient(90deg, #06b6d4, #8b5cf6);
             transition: width 0.3s ease;
         }
+
         .nav-link:hover::after {
             width: 100%;
         }
-        
+
         /* Certification Card */
         .cert-card {
             transition: all 0.3s ease;
         }
+
         .cert-card:hover {
             border-color: rgba(6, 182, 212, 0.5);
             transform: translateX(5px);
         }
     </style>
 </head>
+
 <body class="bg-dark-bg text-gray-100 font-sans antialiased overflow-x-hidden">
-    
+
     <!-- Background Effects -->
     <div class="fixed inset-0 bg-grid pointer-events-none z-0"></div>
     <div class="orb w-96 h-96 bg-neon-cyan top-0 left-0 animate-float"></div>
     <div class="orb w-80 h-80 bg-neon-purple top-1/3 right-0 animate-float" style="animation-delay: -3s;"></div>
     <div class="orb w-64 h-64 bg-neon-pink bottom-0 left-1/3 animate-float" style="animation-delay: -6s;"></div>
-    
+
     <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
-                <a href="#" class="text-xl md:text-2xl font-bold gradient-text truncate max-w-[200px] sm:max-w-none" title="syedalyan512@gmail.com">
+                <a href="#" class="text-xl md:text-2xl font-bold gradient-text truncate max-w-[200px] sm:max-w-none"
+                    title="syedalyan512@gmail.com">
                     syedalyan512@gmail.com
                 </a>
-                
+
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#about" class="nav-link text-gray-300 hover:text-white transition-colors">About</a>
                     <a href="#tech-stack" class="nav-link text-gray-300 hover:text-white transition-colors">Skills</a>
                     <a href="#projects" class="nav-link text-gray-300 hover:text-white transition-colors">Projects</a>
-                    <a href="#experience" class="nav-link text-gray-300 hover:text-white transition-colors">Experience</a>
-                    <a href="#certifications" class="nav-link text-gray-300 hover:text-white transition-colors">Certifications</a>
+                    <a href="#experience"
+                        class="nav-link text-gray-300 hover:text-white transition-colors">Experience</a>
+                    <a href="#certifications"
+                        class="nav-link text-gray-300 hover:text-white transition-colors">Certifications</a>
                     <a href="#contact" class="btn-primary px-6 py-2.5 rounded-full text-white font-medium">Contact</a>
                 </div>
-                
+
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white p-2">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
         </div>
-        
+
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden glass-strong">
             <div class="px-4 py-6 space-y-4">
@@ -293,63 +324,76 @@
                         <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
                         <span class="text-sm text-gray-300">Open to Opportunities</span>
                     </div>
-                    
+
                     <!-- Name -->
                     <h1 class="reveal text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
                         <span class="block text-white">Alyan</span>
                         <span class="block gradient-text">Naqvi</span>
                     </h1>
-                    
+
                     <!-- Title -->
                     <p class="reveal delay-100 text-xl md:text-2xl text-neon-cyan font-medium mb-4">
                         AI Engineer | ML Specialist
                     </p>
-                    
+
                     <!-- Sub-headline -->
                     <p class="reveal delay-200 text-gray-400 text-lg mb-6">
                         Skilled in Gen AI, RAG, Automation Pipelines & AI-driven Solutions
                     </p>
-                    
+
                     <!-- Summary -->
                     <p class="reveal delay-300 text-gray-500 mb-8 max-w-2xl text-center">
-                        Applied AI and ML Specialist with a strong foundation in Generative AI, RAG, enterprise automation (n8n) and scalable software architecture. Proven track record of architecting end-to-end solutions, from training Machine Learning models to deploying production-ready Agentic RAG pipelines. Passionate to build scalable, data-driven solutions and extract actionable insights.
+                        Applied AI and ML Specialist with a strong foundation in Generative AI, RAG, enterprise
+                        automation (n8n) and scalable software architecture. Proven track record of architecting
+                        end-to-end solutions, from training Machine Learning models to deploying production-ready
+                        Agentic RAG pipelines. Passionate to build scalable, data-driven solutions and extract
+                        actionable insights.
                     </p>
-                    
+
                     <!-- Location & Contact -->
                     <div class="reveal delay-400 flex flex-wrap items-center justify-center gap-6 mb-8 text-gray-500">
                         <span class="flex items-center gap-2">
                             <svg class="w-5 h-5 text-neon-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                             </svg>
                             Islamabad, Pakistan
                         </span>
                         <span class="flex items-center gap-2">
                             <svg class="w-5 h-5 text-neon-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                </path>
                             </svg>
                             +92 3475927500
                         </span>
                     </div>
-                    
+
                     <!-- CTA Buttons -->
                     <div class="reveal delay-500 flex flex-col sm:flex-row items-center justify-center gap-6">
-                        <a href="#projects" class="btn-primary px-8 py-4 rounded-full text-white font-semibold text-lg flex items-center gap-2">
+                        <a href="#projects"
+                            class="btn-primary px-8 py-4 rounded-full text-white font-semibold text-lg flex items-center gap-2">
                             View Projects
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                             </svg>
                         </a>
-                        <a href="https://github.com/Alyan1" target="_blank" class="btn-secondary px-8 py-4 rounded-full text-white font-semibold text-lg flex items-center gap-2">
+                        <a href="https://github.com/Alyan1" target="_blank"
+                            class="btn-secondary px-8 py-4 rounded-full text-white font-semibold text-lg flex items-center gap-2">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                             </svg>
                             GitHub
                         </a>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Scroll Indicator -->
             <div class="reveal delay-500 absolute bottom-10 right-10 hidden lg:block">
                 <div class="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center pt-2">
@@ -371,22 +415,26 @@
                     Technologies and tools I use to build intelligent, scalable solutions
                 </p>
             </div>
-            
+
             <!-- Skills Categories -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- ML & AI -->
                 <div class="reveal delay-100 glass rounded-2xl p-6">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-neon-cyan to-blue-600 flex items-center justify-center">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-gradient-to-br from-neon-cyan to-blue-600 flex items-center justify-center">
                             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
                             </svg>
                         </div>
                         <h3 class="font-bold text-white">ML & AI</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">LLM Fine Tuning</span>
-                        <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">Feature Engineering</span>
+                        <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">Feature
+                            Engineering</span>
                         <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">NLP</span>
                         <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">LLMs</span>
                         <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">Scikit-Learn</span>
@@ -395,13 +443,16 @@
                         <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">Agentic RAG</span>
                     </div>
                 </div>
-                
+
                 <!-- Data & Databases -->
                 <div class="reveal delay-200 glass rounded-2xl p-6">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-neon-purple to-pink-600 flex items-center justify-center">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-gradient-to-br from-neon-purple to-pink-600 flex items-center justify-center">
                             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4">
+                                </path>
                             </svg>
                         </div>
                         <h3 class="font-bold text-white">Data & DBs</h3>
@@ -415,13 +466,15 @@
                         <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">Data Cleaning</span>
                     </div>
                 </div>
-                
+
                 <!-- Software Engineering -->
                 <div class="reveal delay-300 glass rounded-2xl p-6">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center">
                             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                             </svg>
                         </div>
                         <h3 class="font-bold text-white">Software Eng</h3>
@@ -435,26 +488,32 @@
                         <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">Agile</span>
                     </div>
                 </div>
-                
+
                 <!-- Infrastructure -->
                 <div class="reveal delay-400 glass rounded-2xl p-6">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
                             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                                </path>
                             </svg>
                         </div>
                         <h3 class="font-bold text-white">Infrastructure</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">n8n</span>
-                        <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">Oracle Cloud (OCI)</span>
+                        <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">Oracle Cloud
+                            (OCI)</span>
                         <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">Git</span>
                         <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">GitHub</span>
-                        <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">Workflow Automation</span>
+                        <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">Workflow
+                            Automation</span>
                         <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">Google Cloud</span>
                         <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">VertexAI</span>
-                        <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">Anthropic Claude Code</span>
+                        <span class="px-3 py-1 rounded-full text-xs bg-dark-card text-gray-300">Anthropic Claude
+                            Code</span>
                     </div>
                 </div>
             </div>
@@ -473,16 +532,18 @@
                     Showcasing my work in AI, automation, and machine learning
                 </p>
             </div>
-            
+
             <!-- Projects Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project Card 1: FYP - Quiz Generation -->
                 <div class="reveal delay-100 project-card glass rounded-2xl overflow-hidden">
                     <div class="relative h-48 overflow-hidden bg-gray-900 flex items-center justify-center group">
-                        <img src="images/quiz%20gen.png" alt="Quiz Generation System" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="images/quiz%20gen.png" alt="Quiz Generation System"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-40"></div>
                         <div class="absolute top-4 right-4">
-                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-neon-cyan/20 text-neon-cyan border border-neon-cyan/30 backdrop-blur-sm">
+                            <span
+                                class="px-3 py-1 rounded-full text-xs font-medium bg-neon-cyan/20 text-neon-cyan border border-neon-cyan/30 backdrop-blur-sm">
                                 FYP
                             </span>
                         </div>
@@ -490,7 +551,8 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">Automated Quiz Generation & Assessment AI</h3>
                         <p class="text-gray-400 text-sm mb-4">
-                            Full-stack ed-tech platform leveraging Agentic RAG and fine-tuned Microsoft Phi-3 to automate quiz generation from lecture notes, streamlining educator workflows.
+                            Full-stack ed-tech platform leveraging Agentic RAG and fine-tuned Microsoft Phi-3 to
+                            automate quiz generation from lecture notes, streamlining educator workflows.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-2 py-1 rounded text-xs bg-dark-card text-gray-400">FastAPI</span>
@@ -499,23 +561,27 @@
                             <span class="px-2 py-1 rounded text-xs bg-dark-card text-gray-400">MySQL</span>
                         </div>
                         <div class="flex gap-3">
-                            <a href="https://github.com/Alyan1/automated-quiz-generation-system" target="_blank" class="flex-1 btn-secondary py-2.5 rounded-lg text-sm font-medium text-center flex items-center justify-center gap-2">
+                            <a href="https://github.com/Alyan1/automated-quiz-generation-system" target="_blank"
+                                class="flex-1 btn-secondary py-2.5 rounded-lg text-sm font-medium text-center flex items-center justify-center gap-2">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                 </svg>
                                 GitHub
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project Card 2: Customer Triage Pipeline -->
                 <div class="reveal delay-200 project-card glass rounded-2xl overflow-hidden">
                     <div class="relative h-48 overflow-hidden bg-gray-900 flex items-center justify-center group">
-                        <img src="images/n8n.jpg" alt="n8n Automation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="images/n8n.jpg" alt="n8n Automation"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-40"></div>
                         <div class="absolute top-4 right-4">
-                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-neon-purple/20 text-neon-purple border border-neon-purple/30 backdrop-blur-sm">
+                            <span
+                                class="px-3 py-1 rounded-full text-xs font-medium bg-neon-purple/20 text-neon-purple border border-neon-purple/30 backdrop-blur-sm">
                                 Automation
                             </span>
                         </div>
@@ -523,7 +589,8 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">AI-Powered Customer Triage & Retention</h3>
                         <p class="text-gray-400 text-sm mb-4">
-                            Zero-touch Agentic workflow using n8n to autonomously ingest support tickets, extract structured data via LLMs, and route high-risk customers for immediate escalation.
+                            Zero-touch Agentic workflow using n8n to autonomously ingest support tickets, extract
+                            structured data via LLMs, and route high-risk customers for immediate escalation.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-2 py-1 rounded text-xs bg-dark-card text-gray-400">n8n</span>
@@ -532,23 +599,28 @@
                             <span class="px-2 py-1 rounded text-xs bg-dark-card text-gray-400">SMTP</span>
                         </div>
                         <div class="flex gap-3">
-                            <a href="https://github.com/Alyan1/AI-Powered-Telecom-Customer-Retention-Pipeline--n8n-" target="_blank" class="flex-1 btn-secondary py-2.5 rounded-lg text-sm font-medium text-center flex items-center justify-center gap-2">
+                            <a href="https://github.com/Alyan1/AI-Powered-Telecom-Customer-Retention-Pipeline--n8n-"
+                                target="_blank"
+                                class="flex-1 btn-secondary py-2.5 rounded-lg text-sm font-medium text-center flex items-center justify-center gap-2">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                 </svg>
                                 GitHub
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project Card 3: Sentiment Analysis -->
                 <div class="reveal delay-300 project-card glass rounded-2xl overflow-hidden">
                     <div class="relative h-48 overflow-hidden bg-gray-900 flex items-center justify-center group">
-                        <img src="images/amzw.png" alt="Sentiment Analysis" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="images/amzw.png" alt="Sentiment Analysis"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-40"></div>
                         <div class="absolute top-4 right-4">
-                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-neon-pink/20 text-neon-pink border border-neon-pink/30 backdrop-blur-sm">
+                            <span
+                                class="px-3 py-1 rounded-full text-xs font-medium bg-neon-pink/20 text-neon-pink border border-neon-pink/30 backdrop-blur-sm">
                                 Machine Learning
                             </span>
                         </div>
@@ -556,7 +628,8 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">Sentiment Analysis on Amazon Reviews</h3>
                         <p class="text-gray-400 text-sm mb-4">
-                            Trained classification models on 1.8M+ Amazon reviews using Scikit-Learn and NLTK, with advanced text preprocessing and rigorous model evaluation.
+                            Trained classification models on 1.8M+ Amazon reviews using Scikit-Learn and NLTK, with
+                            advanced text preprocessing and rigorous model evaluation.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-2 py-1 rounded text-xs bg-dark-card text-gray-400">Python</span>
@@ -565,23 +638,28 @@
                             <span class="px-2 py-1 rounded text-xs bg-dark-card text-gray-400">Pandas</span>
                         </div>
                         <div class="flex gap-3">
-                            <a href="https://github.com/Alyan1/SentementAnalysis-on-AmazonReviewsDataset" target="_blank" class="flex-1 btn-secondary py-2.5 rounded-lg text-sm font-medium text-center flex items-center justify-center gap-2">
+                            <a href="https://github.com/Alyan1/SentementAnalysis-on-AmazonReviewsDataset"
+                                target="_blank"
+                                class="flex-1 btn-secondary py-2.5 rounded-lg text-sm font-medium text-center flex items-center justify-center gap-2">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                 </svg>
                                 GitHub
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project Card 4: Crumble AI -->
                 <div class="reveal delay-400 project-card glass rounded-2xl overflow-hidden">
                     <div class="relative h-48 overflow-hidden bg-gray-900 flex items-center justify-center group">
-                        <img src="images/humorous%20food%20Chat%20Bot.png" alt="Crumble AI Agent" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="images/humorous%20food%20Chat%20Bot.png" alt="Crumble AI Agent"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-40"></div>
                         <div class="absolute top-4 right-4">
-                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-neon-cyan/20 text-neon-cyan border border-neon-cyan/30 backdrop-blur-sm">
+                            <span
+                                class="px-3 py-1 rounded-full text-xs font-medium bg-neon-cyan/20 text-neon-cyan border border-neon-cyan/30 backdrop-blur-sm">
                                 Agentic AI
                             </span>
                         </div>
@@ -589,7 +667,8 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">Crumble: Stateful AI Ordering Agent</h3>
                         <p class="text-gray-400 text-sm mb-4">
-                            A highly scalable, headless AI architecture designed to manage stateful ordering workflows and automate interactions with advanced contextual memory.
+                            A highly scalable, headless AI architecture designed to manage stateful ordering workflows
+                            and automate interactions with advanced contextual memory.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-2 py-1 rounded text-xs bg-dark-card text-gray-400">Python</span>
@@ -598,9 +677,50 @@
                             <span class="px-2 py-1 rounded text-xs bg-dark-card text-gray-400">FastAPI</span>
                         </div>
                         <div class="flex gap-3">
-                            <a href="https://github.com/Alyan1/crumble-ai-agent" target="_blank" class="flex-1 btn-secondary py-2.5 rounded-lg text-sm font-medium text-center flex items-center justify-center gap-2">
+                            <a href="https://github.com/Alyan1/crumble-ai-agent" target="_blank"
+                                class="flex-1 btn-secondary py-2.5 rounded-lg text-sm font-medium text-center flex items-center justify-center gap-2">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 5: Legal Document Q&A -->
+                <div class="reveal delay-500 project-card glass rounded-2xl overflow-hidden">
+                    <div class="relative h-48 overflow-hidden bg-gray-900 flex items-center justify-center group">
+                        <img src="images/RAG%20Document%20Q&A.png" alt="Legal Document Q&A System"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-40"></div>
+                        <div class="absolute top-4 right-4">
+                            <span
+                                class="px-3 py-1 rounded-full text-xs font-medium bg-neon-purple/20 text-neon-purple border border-neon-purple/30 backdrop-blur-sm">
+                                Full-Stack RAG
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Legal Document Q&A System</h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            A modern, full-stack Retrieval-Augmented Generation (RAG) system for questioning legal
+                            documents and PDFs, Zero-Hallucination Documents contxting and Answering questions based on
+                            exact selected document or All the documents uploaded by the user.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 rounded text-xs bg-dark-card text-gray-400">React</span>
+                            <span class="px-2 py-1 rounded text-xs bg-dark-card text-gray-400">FastAPI</span>
+                            <span class="px-2 py-1 rounded text-xs bg-dark-card text-gray-400">RAG</span>
+                            <span class="px-2 py-1 rounded text-xs bg-dark-card text-gray-400">Tailwind CSS</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/Alyan1/Legal-Document-Q-A-with-RAG" target="_blank"
+                                class="flex-1 btn-secondary py-2.5 rounded-lg text-sm font-medium text-center flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                 </svg>
                                 GitHub
                             </a>
@@ -623,19 +743,22 @@
                     My professional journey and academic background
                 </p>
             </div>
-            
+
             <div class="grid lg:grid-cols-2 gap-8">
                 <!-- Experience -->
                 <div class="reveal delay-100">
                     <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-neon-cyan to-blue-600 flex items-center justify-center">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-gradient-to-br from-neon-cyan to-blue-600 flex items-center justify-center">
                             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
                             </svg>
                         </div>
                         Professional Experience
                     </h3>
-                    
+
                     <!-- Python Developer Intern -->
                     <div class="glass rounded-2xl p-6 border-l-4 border-neon-cyan mb-4">
                         <div class="flex items-start justify-between mb-4 flex-wrap gap-2">
@@ -650,19 +773,23 @@
                         <ul class="text-gray-400 text-sm space-y-2 mb-4">
                             <li class="flex items-start gap-2">
                                 <span class="text-neon-cyan mt-1">•</span>
-                                <span>Designed scalable RESTful APIs and optimized data processing pipelines for enterprise applications</span>
+                                <span>Designed scalable RESTful APIs and optimized data processing pipelines for
+                                    enterprise applications</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <span class="text-neon-cyan mt-1">•</span>
-                                <span>Engineered high-performance backend endpoints using FastAPI and Pandas, reducing query execution time</span>
+                                <span>Engineered high-performance backend endpoints using FastAPI and Pandas, reducing
+                                    query execution time</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <span class="text-neon-cyan mt-1">•</span>
-                                <span>Implemented automated data validation scripts, reducing manual debugging time by ~20%</span>
+                                <span>Implemented automated data validation scripts, reducing manual debugging time by
+                                    ~20%</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <span class="text-neon-cyan mt-1">•</span>
-                                <span>Collaborated with Agile team to troubleshoot critical production bugs, ensuring system uptime</span>
+                                <span>Collaborated with Agile team to troubleshoot critical production bugs, ensuring
+                                    system uptime</span>
                             </li>
                         </ul>
                         <div class="flex flex-wrap gap-2">
@@ -673,19 +800,23 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Education -->
                 <div class="reveal delay-200">
                     <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-neon-purple to-pink-600 flex items-center justify-center">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-gradient-to-br from-neon-purple to-pink-600 flex items-center justify-center">
                             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
+                                </path>
                             </svg>
                         </div>
                         Education
                     </h3>
-                    
+
                     <div class="glass rounded-2xl p-6 border-l-4 border-neon-purple">
                         <div class="flex items-start justify-between mb-4 flex-wrap gap-2">
                             <div>
@@ -703,7 +834,9 @@
                             </div>
                         </div>
                         <p class="text-gray-400 text-sm">
-                            Strong foundation in software engineering, data structures, algorithms, and artificial intelligence. Coursework included Machine Learning, Deep Learning, and Database Management Systems.
+                            Strong foundation in software engineering, data structures, algorithms, and artificial
+                            intelligence. Coursework included Machine Learning, Deep Learning, and Database Management
+                            Systems.
                         </p>
                     </div>
                 </div>
@@ -723,47 +856,59 @@
                     Professional certifications validating my expertise
                 </p>
             </div>
-            
+
             <!-- Certifications Grid -->
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- Oracle Certification -->
-                <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=2054E7E8D05EDF1893CBDC80AE02157531B635105746CC30969E16E452F13CEE" target="_blank" class="reveal delay-100 cert-card glass rounded-2xl p-6 border border-gray-700 block">
+                <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=2054E7E8D05EDF1893CBDC80AE02157531B635105746CC30969E16E452F13CEE"
+                    target="_blank"
+                    class="reveal delay-100 cert-card glass rounded-2xl p-6 border border-gray-700 block">
                     <div class="flex items-start gap-4">
-                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center flex-shrink-0">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center flex-shrink-0">
                             <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                             </svg>
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">Oracle Cloud Infrastructure 2025 Certified Generative AI Professional</h3>
+                            <h3 class="text-lg font-bold text-white mb-1">Oracle Cloud Infrastructure 2025 Certified
+                                Generative AI Professional</h3>
                             <p class="text-neon-cyan text-sm mb-2">Oracle</p>
                             <p class="text-gray-500 text-sm">2025</p>
                         </div>
                     </div>
                 </a>
-                
+
                 <!-- IBM Deep Learning -->
-                <a href="https://www.coursera.org/account/accomplishments/certificate/35VF6SQP6A8Y" target="_blank" class="reveal delay-200 cert-card glass rounded-2xl p-6 border border-gray-700 block">
+                <a href="https://www.coursera.org/account/accomplishments/certificate/35VF6SQP6A8Y" target="_blank"
+                    class="reveal delay-200 cert-card glass rounded-2xl p-6 border border-gray-700 block">
                     <div class="flex items-start gap-4">
-                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
                             <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                             </svg>
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-lg font-bold text-white mb-1">Introduction to Deep Learning & Neural Networks with Keras</h3>
+                            <h3 class="text-lg font-bold text-white mb-1">Introduction to Deep Learning & Neural
+                                Networks with Keras</h3>
                             <p class="text-neon-purple text-sm mb-2">IBM: Coursera</p>
                             <p class="text-gray-500 text-sm">2024</p>
                         </div>
                     </div>
                 </a>
-                
+
                 <!-- IBM Machine Learning -->
-                <a href="https://www.coursera.org/account/accomplishments/certificate/B5Z5KPAJ444Z" target="_blank" class="reveal delay-300 cert-card glass rounded-2xl p-6 border border-gray-700 block">
+                <a href="https://www.coursera.org/account/accomplishments/certificate/B5Z5KPAJ444Z" target="_blank"
+                    class="reveal delay-300 cert-card glass rounded-2xl p-6 border border-gray-700 block">
                     <div class="flex items-start gap-4">
-                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
                             <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                             </svg>
                         </div>
                         <div class="flex-1">
@@ -773,13 +918,16 @@
                         </div>
                     </div>
                 </a>
-                
+
                 <!-- Git & GitHub -->
-                <a href="https://www.coursera.org/account/accomplishments/verify/C3SMFUVTAGJ9" target="_blank" class="reveal delay-400 cert-card glass rounded-2xl p-6 border border-gray-700 block">
+                <a href="https://www.coursera.org/account/accomplishments/verify/C3SMFUVTAGJ9" target="_blank"
+                    class="reveal delay-400 cert-card glass rounded-2xl p-6 border border-gray-700 block">
                     <div class="flex items-start gap-4">
-                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center flex-shrink-0">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center flex-shrink-0">
                             <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                             </svg>
                         </div>
                         <div class="flex-1">
@@ -804,13 +952,16 @@
                     Open to opportunities in AI/ML engineering, automation, and software development roles
                 </p>
             </div>
-            
+
             <!-- Contact Buttons -->
             <div class="reveal delay-100 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <a href="https://github.com/Alyan1" target="_blank" class="group flex items-center gap-4 glass px-6 py-4 rounded-2xl hover:border-neon-cyan/50 transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center group-hover:bg-neon-cyan/20 transition-colors">
+                <a href="https://github.com/Alyan1" target="_blank"
+                    class="group flex items-center gap-4 glass px-6 py-4 rounded-2xl hover:border-neon-cyan/50 transition-all duration-300">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center group-hover:bg-neon-cyan/20 transition-colors">
                         <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                         </svg>
                     </div>
                     <div class="text-left">
@@ -818,11 +969,14 @@
                         <p class="text-white font-semibold">GitHub</p>
                     </div>
                 </a>
-                
-                <a href="https://www.linkedin.com/in/alyan-naqvi/" target="_blank" class="group flex items-center gap-4 glass px-6 py-4 rounded-2xl hover:border-neon-purple/50 transition-all duration-300">
-                    <div class="w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center group-hover:bg-neon-purple/20 transition-colors">
+
+                <a href="https://www.linkedin.com/in/alyan-naqvi/" target="_blank"
+                    class="group flex items-center gap-4 glass px-6 py-4 rounded-2xl hover:border-neon-purple/50 transition-all duration-300">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center group-hover:bg-neon-purple/20 transition-colors">
                         <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                         </svg>
                     </div>
                     <div class="text-left">
@@ -830,28 +984,38 @@
                         <p class="text-white font-semibold">LinkedIn</p>
                     </div>
                 </a>
-                
-                <div onclick="let ct=this.querySelector('.contact-text'); ct.textContent='syedalyan512@gmail.com'; ct.classList.replace('truncate', 'break-all'); ct.classList.replace('text-sm', 'text-xs'); ct.classList.replace('sm:text-base', 'sm:text-sm');" class="group flex items-center gap-4 glass px-6 py-4 rounded-2xl hover:border-neon-pink/50 transition-all duration-300 cursor-pointer">
-                    <div class="w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center group-hover:bg-neon-pink/20 transition-colors">
+
+                <div onclick="let ct=this.querySelector('.contact-text'); ct.textContent='syedalyan512@gmail.com'; ct.classList.replace('truncate', 'break-all'); ct.classList.replace('text-sm', 'text-xs'); ct.classList.replace('sm:text-base', 'sm:text-sm');"
+                    class="group flex items-center gap-4 glass px-6 py-4 rounded-2xl hover:border-neon-pink/50 transition-all duration-300 cursor-pointer">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center group-hover:bg-neon-pink/20 transition-colors">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
                         </svg>
                     </div>
                     <div class="text-left w-full overflow-hidden">
                         <p class="text-sm text-gray-400">Get in touch</p>
-                        <p class="text-white font-semibold text-sm sm:text-base truncate contact-text" title="Click to view">E-Mail</p>
+                        <p class="text-white font-semibold text-sm sm:text-base truncate contact-text"
+                            title="Click to view">E-Mail</p>
                     </div>
                 </div>
-                
-                <div onclick="let ct=this.querySelector('.contact-text'); ct.textContent='+92 3475927500'; ct.classList.replace('truncate', 'break-all'); ct.classList.replace('text-sm', 'text-xs'); ct.classList.replace('sm:text-base', 'sm:text-sm');" class="group flex items-center gap-4 glass px-6 py-4 rounded-2xl hover:border-green-400/50 transition-all duration-300 cursor-pointer">
-                    <div class="w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center group-hover:bg-green-400/20 transition-colors">
+
+                <div onclick="let ct=this.querySelector('.contact-text'); ct.textContent='+92 3475927500'; ct.classList.replace('truncate', 'break-all'); ct.classList.replace('text-sm', 'text-xs'); ct.classList.replace('sm:text-base', 'sm:text-sm');"
+                    class="group flex items-center gap-4 glass px-6 py-4 rounded-2xl hover:border-green-400/50 transition-all duration-300 cursor-pointer">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center group-hover:bg-green-400/20 transition-colors">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                            </path>
                         </svg>
                     </div>
                     <div class="text-left w-full overflow-hidden">
                         <p class="text-sm text-gray-400">Call me</p>
-                        <p class="text-white font-semibold text-sm sm:text-base truncate contact-text" title="Click to view">Phone/ WhatsApp</p>
+                        <p class="text-white font-semibold text-sm sm:text-base truncate contact-text"
+                            title="Click to view">Phone/ WhatsApp</p>
                     </div>
                 </div>
             </div>
@@ -881,9 +1045,9 @@
         // ============================================
         // SCROLL REVEAL ANIMATION
         // ============================================
-        
+
         const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
-        
+
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -894,15 +1058,15 @@
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         });
-        
+
         revealElements.forEach(el => revealObserver.observe(el));
-        
+
         // ============================================
         // NAVIGATION SCROLL EFFECT
         // ============================================
-        
+
         const navbar = document.getElementById('navbar');
-        
+
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 navbar.classList.add('glass-strong');
@@ -910,28 +1074,28 @@
                 navbar.classList.remove('glass-strong');
             }
         });
-        
+
         // ============================================
         // MOBILE MENU TOGGLE
         // ============================================
-        
+
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-        
+
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         });
-        
+
         // ============================================
         // SMOOTH SCROLL FOR ANCHOR LINKS
         // ============================================
-        
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -944,13 +1108,13 @@
                 }
             });
         });
-        
+
         // ============================================
         // PARALLAX EFFECT FOR BACKGROUND ORBS
         // ============================================
-        
+
         const orbs = document.querySelectorAll('.orb');
-        
+
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             orbs.forEach((orb, index) => {
@@ -958,14 +1122,15 @@
                 orb.style.transform = `translateY(${scrolled * speed}px)`;
             });
         });
-        
+
         // ============================================
         // CONSOLE EASTER EGG
         // ============================================
-        
+
         console.log('%c👋 Hey there, fellow developer!', 'color: #06b6d4; font-size: 16px; font-weight: bold;');
         console.log('%cThanks for checking out my portfolio!', 'color: #8b5cf6; font-size: 14px;');
         console.log('%cLet\'s build something amazing together!', 'color: #ec4899; font-size: 14px;');
     </script>
 </body>
+
 </html>
